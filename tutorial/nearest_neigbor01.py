@@ -16,7 +16,7 @@ print(y_test) #実際のデータ
 
 print(round(clf.score(X_test, y_test), 3)) #正解率の計算
 
-clf_10 = KNeighborsClassifier(n_neighbors = 10) パラメーターを変更してみる
+clf_10 = KNeighborsClassifier(n_neighbors = 10) #パラメーターを変更してみる
 clf_10.fit(X_train, y_train) #モデルの作成
 print(round(clf_10.score(X_test, y_test), 3)) #正解率の計算
 
