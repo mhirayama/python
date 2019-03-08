@@ -1,2 +1,4 @@
 *.csv
 taxi/
+house_sales/
+titanic/
