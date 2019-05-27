@@ -33,6 +33,8 @@ for line in text:
     for line2 in re_wakati1:
         if re.match(single,line2):
             re_wakati2 = ""
+        elif len(line2.encode('utf-8')) < 3:
+            re_wakati2 = ""
         else:
             re_wakati2 = line2
         print(re_wakati2,end=" ")
