@@ -65,3 +65,8 @@ submission = pd.DataFrame({
 })
 
 submission.to_csv('titanic/submission.csv', index = False) #submission.csvとして書き出し
+
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+xgb.plot_importance(model)
+plt.show()

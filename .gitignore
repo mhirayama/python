@@ -1,5 +1,6 @@
 *.csv
 *.txt
+*.pdf
 taxi/
 house_sales/
 titanic/
