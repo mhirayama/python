@@ -38,7 +38,7 @@ terms = len(jisho)
 T = [gensim.matutils.corpus2dense([jisho.doc2bow(doc)],num_terms=terms, dtype=None).T[0] for doc in list(reviews.was)]
 t = np.array(T)
 
-model = KMeans(n_clusters=8, random_state=10).fit(t)
+model = KMeans(n_clusters=5, random_state=10).fit(t)
 label = model.labels_
 
 import codecs

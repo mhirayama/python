@@ -2,6 +2,7 @@
 import csv
 import requests
 import codecs
+import time
 from bs4 import BeautifulSoup
 
 f = codecs.open('akb48_id.csv', 'w', 'utf-8')
@@ -20,6 +21,6 @@ for i in range(1, 4):
     for code, title in zip(codes, titles):
         print(code.find('a').attrs['href'][6:].replace("/", ''), title.text)
         f.write(str(code.find('a').attrs['href'][6:].replace("/", '')) + ',' + title.text + "\n")
-
+        time.sleep(1)
 
 f.close()

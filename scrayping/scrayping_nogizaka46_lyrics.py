@@ -2,6 +2,7 @@
 import csv
 import requests
 import codecs
+import time
 from bs4 import BeautifulSoup
 import pandas as pd
 
@@ -24,6 +25,6 @@ for i in nogi46_02:
         print(lyric.text.replace(",", ''))
 
         f.write(str(lyric.text.replace(",", '') + "\n"))
-
+        time.sleep(1)
 
 f.close()

@@ -2,6 +2,7 @@
 import csv
 import requests
 import codecs
+import time
 from bs4 import BeautifulSoup
 
 f = codecs.open('tabelog_ramen.csv', 'w', 'utf-8')
@@ -22,6 +23,6 @@ for i in range(1, 6):
     for code, name, area, point, count in zip(codes, names, areas, points, counts):
         print(code.attrs['data-rst-id'], name.text, area.text, point.text, count.text)
         f.write(str(code.attrs['data-rst-id']) + ',' + name.text + ',' + area.text + ',' + point.text  + ',' + count.text  + "\n")
-
+        time.sleep(1)
 
 f.close()

@@ -8,3 +8,6 @@ kickstarter/
 pokemon/
 house-prices/
 npb/
+#django/
+db.sqlite3
+/static

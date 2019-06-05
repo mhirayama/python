@@ -6,6 +6,7 @@ import pandas as pd
 import itertools
 import numpy as np
 import re
+import time
 
 f = codecs.open('tabelog_ramen_review01.csv', 'w', 'utf-8')
 f.write("code,date,review" "\n")
@@ -28,5 +29,5 @@ for i,j in list3:
     for code, date, review in zip(codes, dates, reviews):
         print(re.sub(r'\D','',code.attrs['data-detail-url'])[10:18], date.text.replace("\n", ' ').replace(" ",''), review.text.replace("\n", ' ').replace(" ",'').replace(",",' '))
         f.write(re.sub(r'\D','',code.attrs['data-detail-url'])[10:18] + ',' + date.text.replace("\n", ' ').replace(" ",'') + ',' + review.text.replace("\n", ' ').replace(" ",'').replace(",",' ') + "\n")
-
+        time.sleep(1)
 f.close()
